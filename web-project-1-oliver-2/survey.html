@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/Plopper.png" type="image/x-icon" />
+    <title>Survey | The Simpsons Fanpage</title>
+  </head>
+  <body>
+    <header>
+      <h1>This is the survey page!</h1>
+      <h2>
+        This page will help us know what we should improve about this website!
+      </h2>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="characters.html">Characters</a>
+        </li>
+        <li>
+          <a href="#">Survey</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <p>
+        <b>
+          <mark>
+            NOTE: DO NOT TYPE IN ANY OF YOUR PERSONAL OR PRIVATE INFORMATION AS
+            THIS WEBSITE IS ONLY FOR A SCHOOL PROJECT!
+          </mark>
+        </b>
+      </p>
+      <!--
+      Below this comment will be the form of the survey webpage!
+      -->
+      <form id="Survey-Form">
+        <!--
+        Below this comment is the personal information fieldset where
+        our user will put their personal information such as their first name
+        last name, etc.
+        -->
+        <fieldset form="Survey-Form" id="Personal-Information">
+          <legend id="Personal-Info-Legend">Personal Information:</legend>
+          <label for="F-Name" id="First-Name-Label"
+            >First Name (Required) (Example: John):</label
+          >
+          <input type="text" id="F-Name" name="First-Name" required />
+          <label for="L-Name" id="Last-Name-Label"
+            >Last Name (Required) (Example: Thompson):</label
+          >
+          <input type="text" id="L-Name" name="Last-Name" required />
+        </fieldset>
+        <!--
+        Below is the rating fieldset section of the form!
+        -->
+        <fieldset id="Rating" form="Survey-Form">
+          <legend>Rate this website out of 5 stars</legend>
+          <label for="5-Rating" id="5-Rating-Label">5 Stars</label>
+          <input type="radio" id="5-Rating" name="Rating" value="5" required />
+          <br />
+          <label for="4-Rating" id="4-Rating-Label">4 Stars</label>
+          <input type="radio" id="4-Rating" name="Rating" value="4" required />
+          <br />
+          <label for="3-Rating" id="3-Rating-Label">3 Stars</label>
+          <input type="radio" id="3-Rating" name="Rating" value="3" required />
+          <br />
+          <label for="Rating" id="2-Rating-Label">2 Stars</label>
+          <input type="radio" id="2-Rating" name="Rating" value="2" required />
+          <br />
+          <label for="Rating" id="1-Rating-Label">1 Star</label>
+          <input type="radio" id="1-Rating" name="Rating" value="1" required />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
