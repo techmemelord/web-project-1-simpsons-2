@@ -36,44 +36,132 @@
         </b>
       </p>
       <!--
-      Below this comment will be the form of the survey webpage!
+      This will be the form where our user first 
+      fills out their personal information such as their first name and last name.
+
+      Then there will be a section where they fill out some facts about theirselves such as their favourite colour.
+
+      Then they will choose one of the five radio buttons to rate this website out of 5 stars.
+
+      Finally, before the submit button, there will be a mandatory text area explaining your reason for your review and another text area
+      that is optional for suggestions of improvement.
+      
+      This form has the id Survey-Form which will where the user will fill out the information that is mentioned in each
+      input of the form
+
+      This form uses the get method since we don't know how to script back-end
+      and we won't learn it in this class
       -->
-      <form id="Survey-Form">
-        <!--
-        Below this comment is the personal information fieldset where
-        our user will put their personal information such as their first name
-        last name, etc.
-        -->
+      <form id="Survey-Form" method="get">
+        <!-- This section of the form is where the 
+          user's personal information will be gathered such as
+          their first name, email, phone number, etc.-->
         <fieldset form="Survey-Form" id="Personal-Information">
+          <!--
+          This tag will add a title to this fieldset or section of the form 
+          telling the user that this is where they put their personal information in
+          -->
           <legend id="Personal-Info-Legend">Personal Information:</legend>
-          <label for="F-Name" id="First-Name-Label"
-            >First Name (Required) (Example: John):</label
+          <!--
+          This label and input gather the user's first name as text input.
+
+          This label is specifically for the first name text input.
+
+          The input has an ID of first-name to uniquely identify this text input as the First Name input.
+
+          The name of the input is first-name which will store the value that the user
+          enters as their first name in the first-name variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="fname">First Name (Required) (Example: John):</label>
+          <input type="text" id="fname" name="first-name" required />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's middle name as text input.
+
+          This label is specifically for the middle name text input.
+
+          The input has an ID of middle-name to uniquely identify this text input as the Middle Name input.
+
+          The name of the input is middle-name which will store the value that the user
+          enters as their middle name in the middle-name variable when the form is submitted
+          -->
+          <label for="mname">Middle Name (Example: Pablo)</label>
+          <input type="text" id="mname" name="middle-name" />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's last name as text input.
+
+          This label is specifically for the last name text input.
+
+          The input has an ID of last-name to uniquely identify this text input as the Last Name input.
+
+          The name of the input is last-name which will store the value that the user
+          enters as their last name in the last-name variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="lName">Last Name (Required) (Example: Thompson):</label>
+          <input type="text" id="lname" name="last-name" required />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's email as email input.
+
+          This label is specifically for the email input.
+
+          The input has an ID of Email to uniquely identify this text input as the email input.
+
+          The name of the input is Email which will store the value that the user
+          enters as their email in the email variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="Email"
+            >Email (Required) (Example: Homer7471@madeupdomain.com)</label
           >
-          <input type="text" id="F-Name" name="First-Name" required />
-          <label for="L-Name" id="Last-Name-Label"
-            >Last Name (Required) (Example: Thompson):</label
+          <input type="email" name="email" id="Email" required />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's phone number as a tel input.
+
+          This label is specifically for the tel input.
+
+          The input has an ID of phone-number to uniquely identify this text input as the phone number input.
+
+          The name of the input is phonenum which will store the value that the user
+          enters as their phone number in the phonenum variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="phone-number"
+            >Phone Number (Required) (Example: 1-768-321-6161)</label
           >
-          <input type="text" id="L-Name" name="Last-Name" required />
+          <input type="tel" name="phonenum" id="phone-number" required />
         </fieldset>
         <!--
-        Below is the rating fieldset section of the form!
+        This section of the form will gather how many out of 5 stars did they rate this website out of
         -->
         <fieldset id="Rating" form="Survey-Form">
           <legend>Rate this website out of 5 stars</legend>
-          <label for="5-Rating" id="5-Rating-Label">5 Stars</label>
-          <input type="radio" id="5-Rating" name="Rating" value="5" required />
+          <label for="5-rating">5 Stars</label>
+          <input type="radio" id="5-rating" name="rating" value="5" required />
           <br />
-          <label for="4-Rating" id="4-Rating-Label">4 Stars</label>
-          <input type="radio" id="4-Rating" name="Rating" value="4" required />
+          <label for="4-rating">4 Stars</label>
+          <input type="radio" id="4-rating" name="rating" value="4" required />
           <br />
-          <label for="3-Rating" id="3-Rating-Label">3 Stars</label>
-          <input type="radio" id="3-Rating" name="Rating" value="3" required />
+          <label for="3-rating">3 Stars</label>
+          <input type="radio" id="3-rating" name="rating" value="3" required />
           <br />
-          <label for="Rating" id="2-Rating-Label">2 Stars</label>
-          <input type="radio" id="2-Rating" name="Rating" value="2" required />
+          <label for="rating">2 Stars</label>
+          <input type="radio" id="2-rating" name="rating" value="2" required />
           <br />
-          <label for="Rating" id="1-Rating-Label">1 Star</label>
-          <input type="radio" id="1-Rating" name="Rating" value="1" required />
+          <label for="rating">1 Star</label>
+          <input type="radio" id="1-rating" name="rating" value="1" required />
         </fieldset>
       </form>
     </main>
