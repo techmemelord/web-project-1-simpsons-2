@@ -43,9 +43,11 @@
 
       Then they will choose one of the five radio buttons to rate this website out of 5 stars.
 
-      Finally, before the submit button, there will be a mandatory text area explaining your reason for your review and another text area
+      Finally, before the submit and reset button, there will be a mandatory text area explaining your reason for your review and another text area
       that is optional for suggestions of improvement.
       
+      After that section will be the submit and reset buttons of the form.
+
       This form has the id Survey-Form which will where the user will fill out the information that is mentioned in each
       input of the form
 
@@ -53,9 +55,15 @@
       and we won't learn it in this class
       -->
       <form id="Survey-Form" method="get">
-        <!-- This section of the form is where the 
+        <!-- 
+          This section of the form is where the 
           user's personal information will be gathered such as
-          their first name, email, phone number, etc.-->
+          their first name, email, phone number, etc.
+
+          the form attribute in the fieldset is used to show what form is the fieldset in and attached to
+
+          it has the id Personal-Information to identify it as the personal information section of the form
+        -->
         <fieldset form="Survey-Form" id="Personal-Information">
           <!--
           This tag will add a title to this fieldset or section of the form 
@@ -121,7 +129,7 @@
           this input requires text before the user can submit the form
           -->
           <label for="Email"
-            >Email (Required) (Example: Homer7471@madeupdomain.com)</label
+            >Email (Required) (Example: Homer7471@madeupdomain.com):</label
           >
           <input type="email" name="email" id="Email" required />
           <br />
@@ -129,7 +137,7 @@
           <!--
           This label and input gather the user's phone number as a tel input.
 
-          This label is specifically for the tel input.
+          This label is specifically for the phone number input.
 
           The input has an ID of phone-number to uniquely identify this text input as the phone number input.
 
@@ -139,15 +147,114 @@
           this input requires text before the user can submit the form
           -->
           <label for="phone-number"
-            >Phone Number (Required) (Example: 1-768-321-6161)</label
+            >Phone Number (Required) (Example: 1-768-321-6161):</label
           >
           <input type="tel" name="phonenum" id="phone-number" required />
         </fieldset>
         <!--
+        This section of the form will gather certain facts about the user such as their favourtie colour
+
+        the form attribute in the fieldset is used to show what form is the fieldset in and attached to which in this case, is
+        attached to the survet form
+
+          it has the id Fun-User-Facts to identify it as the facts about yourself section of the form
+        -->
+        <fieldset id="Fun-User-Facts" form="Survey-Form">
+          <!--
+          This tag will add a title to this fieldset or section of the form 
+          telling the user that this is where they fill out fun facts about themselves
+          -->
+          <legend>Facts about yourself</legend>
+          <!--
+          This label and input gather the user's favourite colour as a color input.
+
+          This label is specifically for the favourite colour input.
+
+          The input has an ID of favourite-colour to uniquely identify this text input as the favourite colour input.
+
+          The name of the input is favcolour which will store the value that the user
+          enters as their favourite colour in the favcolour variable when the form is submitted
+
+          this input requires input from the user before they can submit the form
+          -->
+          <label for="favourite-colour"
+            >Favourite Colour (Required) (Example: 255,255,255):</label
+          >
+          <input type="color" name="favcolour" id="favourite-colour" required />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's favourite number as a number input.
+
+          This label is specifically for the favourite number input.
+
+          The input has an ID of favourite-number to uniquely identify this text input as the phone number input.
+
+          The name of the input is favnumber which will store the value that the user
+          enters as their favourite number in the favnumber variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="favourite-number"
+            >Favourite Number (Required) (Example: 24):</label
+          >
+          <input
+            type="number"
+            name="favnumber"
+            id="favourite-number"
+            required />
+          <br />
+          <br />
+          <!--
+          This label and input gather the user's favourite month of the year as a month input.
+
+          This label is specifically for the favourite month input.
+
+          The input has an ID of favourite-month to uniquely identify this text input as the favourite month input.
+
+          The name of the input is favmonth which will store the value that the user
+          enters as their favourite month in the favmonth variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="favourite-month"
+            >Favourite Month (Required) (Example: July)</label
+          >
+          <input type="month" name="favmonth" id="favourite-month" required />
+        </fieldset>
+        <!--
         This section of the form will gather how many out of 5 stars did they rate this website out of
+        
+        the form attribute in the fieldset is used to show what form is the fieldset in and attached to which would be the 
+        Survey-Form variable
+
+          it has the id Rating to identify it as the User's Rating section of the form
         -->
         <fieldset id="Rating" form="Survey-Form">
-          <legend>Rate this website out of 5 stars</legend>
+          <!--
+          This tag will add a title to this fieldset or section of the form 
+          telling the user that this is where they click one of the 5 radio buttons to rate
+          this website out of 5 stars
+          -->
+          <legend>Rate this website out of 5 stars (Required)</legend>
+          <!--
+          This series of labels and inputs gather the user's rating as 5 stars, 4 stars, and so on as a radio button.
+
+          These labels are specifically for the inputs of the specific ratings of 5 stars 4 stars, and so on respectively.
+
+          The input has an ID of 5-rating, 4-rating, and so on to uniquely identify the specific radio button as
+          that respective star rating input.
+
+          The name of the input is rating which will store the value of the user's rating from 1 of the 5 radio buttons
+          when the form is submitted
+
+          this input requires one of the radio buttons to be chosen before the user can submit the form.
+
+          The radio input names have to all be the same so that the user can only select one of the 5 radio buttons to submit
+
+          The value attribute determines the value of the radio button when it is selected by the user with 
+          each button having values based on their respective rating of 5,4, and so on
+          -->
           <label for="5-rating">5 Stars</label>
           <input type="radio" id="5-rating" name="rating" value="5" required />
           <br />
@@ -162,6 +269,101 @@
           <br />
           <label for="rating">1 Star</label>
           <input type="radio" id="1-rating" name="rating" value="1" required />
+        </fieldset>
+        <!--
+          This section of the form will gather how many out of 5 stars did they rate this website out of
+        
+          the form attribute in the fieldset is used to show what form is the fieldset in and attached to which would be the 
+          Survey-Form variable
+
+          it has the id Reason-and-Suggestions to identify it as the section of the form where the user writes the 
+          reason for their review and optionally a suggestion to improve the website
+        -->
+        <fieldset form="Survey-Form" id="Reason-and-Suggestions">
+          <!--
+          This tag will add a title to this fieldset or section of the form 
+          telling the user that this is where they write the reason for their rating and suggestions
+          -->
+          <legend>Reason and Suggestions</legend>
+          <!--
+          This label and textarea gather the user's reason for their rating.
+
+          This label is specifically for the reason textarea.
+
+          The input has an ID of rating-reason-textarea to uniquely identify this text input as the rating reason textarea.
+
+          The name of the input is reason which will store the value that the user
+          enters as their reason for their rating in the reason variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+          <label for="reason-textbox"
+            >Reason for rating (required) (Example: It has very good
+            design):</label
+          >
+          <br />
+          <textarea
+            name="reason"
+            id="rating-reason-textarea"
+            required></textarea>
+          <!--
+          This label and textarea gather the user's reason for their rating.
+
+          This label is specifically for the reason textarea.
+
+          The input has an ID of rating-reason-textarea to uniquely identify this text input as the rating reason textarea.
+
+          The name of the input is reason which will store the value that the user
+          enters as their reason for their rating in the reason variable when the form is submitted
+
+          this input requires text before the user can submit the form
+          -->
+
+          <br />
+          <br />
+
+          <label for="suggestion-textarea"
+            >Suggestions (Example: Add more content):</label
+          >
+          <br />
+          <textarea name="suggestion" id="suggestion-textarea"></textarea>
+        </fieldset>
+        <!--
+          This section of the form is for miscellaneous inputs which are the reset and submit button
+        
+          the form attribute in the fieldset is used to show what form is the fieldset in and attached to which would be the 
+          Survey-Form variable
+
+          it has the id Miscellaneous to identify it as the section of the form where the user submits their form and
+          resets it
+        -->
+        <fieldset id="Miscellaneous" form="Survey-Form">
+          <!--
+            This input is where the user submits their survey as a submit input
+
+            it has the id survey-submit-button to identify it as the submit button of the survey form
+            
+            the value attribute is used to label the text inside the submit button which in this case label it as "Submit your survey!"
+
+            all of the required inputs must be filled in before the user can submit their form
+          -->
+          <input
+            type="submit"
+            id="survey-submit-button"
+            value="Submit your survey!" />
+          <!--
+            This input is where the user resets their survey as a reset input
+
+            it has the id survey-reset-button to identify it as the reset button of the survey form
+            
+            the value attribute is used to label the text inside the reset button which in this case label it as "Reset your survey!"
+
+          This will reset the user's survey form and reset all the inputs within the form
+          -->
+          <input
+            type="reset"
+            id="survey-reset-button"
+            value="Reset your survey!" />
         </fieldset>
       </form>
     </main>
